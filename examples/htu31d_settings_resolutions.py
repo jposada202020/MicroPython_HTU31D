@@ -1,15 +1,12 @@
 # SPDX-FileCopyrightText: Copyright (c) 2021 Jose David M.
-# SPDX-FileCopyrightText: Copyright (c) 2023 Jose D. Montoya
 #
 # SPDX-License-Identifier: MIT
 
-import time
 from machine import Pin, I2C
 from micropython_htu31d import htu31d
 
 i2c = I2C(1, sda=Pin(2), scl=Pin(3))  # Correct I2C pins for RP2040
 htu = htu31d.HTU31D(i2c)
-
 
 print("Temperature Resolution: ", htu.temp_resolution)
 print("Humidity Resolution: ", htu.humidity_resolution)

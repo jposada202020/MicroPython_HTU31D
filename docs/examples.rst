@@ -12,7 +12,6 @@ Setting Resolution Example
 
 Show how to setup Relative Humidity and Temperature Sensor Resolutions
 
-.. literalinclude:: ../examples/htu31d_setting_resolutions.py
-    :caption: examples/htu31d_setting_resolutions.py
+.. literalinclude:: ../examples/htu31d_settings_resolutions.py
+    :caption: examples/htu31d_settings_resolutions.py
     :lines: 5-
-

@@ -8,17 +8,17 @@
 MicroPython library for TE HTU31D temperature and humidity sensors
 
 
-* Author(s): Jose D. Montoya
+* Author(s): ladyada, Jose D. Montoya
 
 
 """
 
 import time
-from micropython import const
 import struct
+from micropython import const
 
 try:
-    from typing import Tuple, Any
+    from typing import Tuple, Any, Literal
 except ImportError:
     pass
 
@@ -189,9 +189,7 @@ class HTU31D:
         self, value: Literal["0.020%", "0.014%", "0.010%", "0.007%"]
     ) -> None:
         if value not in _HUMIDITY_RES:
-            raise ValueError(
-                f"Humidity resolution must be one of: {_HUMIDITY_RES}"
-            )
+            raise ValueError(f"Humidity resolution must be one of: {_HUMIDITY_RES}")
         register = self._conversion_command & 0xCF
         hum_res = _HUMIDITY_RES.index(value)
         self._conversion_command = register | hum_res << 4
@@ -216,9 +214,7 @@ class HTU31D:
         self, value: Literal["0.040", "0.025", "0.016", "0.012"]
     ) -> None:
         if value not in _TEMP_RES:
-            raise ValueError(
-                f"Temperature resolution must be one of: {_TEMP_RES}"
-            )
+            raise ValueError(f"Temperature resolution must be one of: {_TEMP_RES}")
         register = self._conversion_command & 0xF3
         temp_res = _TEMP_RES.index(value)
         self._conversion_command = register | temp_res << 2
