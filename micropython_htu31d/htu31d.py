@@ -51,13 +51,13 @@ class HTU31D:
     .. code-block:: python
 
         from machine import Pin, I2C
-        import htu31d
+        from micropython_htu31d import htu31d
 
     Once this is done you can define your `machine.I2C` object and define your sensor object
 
     .. code-block:: python
 
-        i2c = I2C(sda=Pin28), scl=Pin(3))
+        i2c = I2C(1, sda=Pin(2), scl=Pin(3))
         htu31d = htu31d.HTU31D(i2c)
 
     Now you have access to the :attr:`temperature` and :attr:`relative_humidity`
