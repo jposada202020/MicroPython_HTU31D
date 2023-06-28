@@ -130,7 +130,7 @@ class HTU31D:
         """both `temperature` and `relative_humidity`, read simultaneously"""
 
         self._i2c.writeto(self._address, bytes([self._conversion_command]), False)
-        time.sleep(0.02)
+        time.sleep(0.03)
         self._i2c.writeto(self._address, bytes([_READTEMPHUM]), False)
         self._i2c.readfrom_into(self._address, self._data)
 
