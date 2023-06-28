@@ -182,7 +182,7 @@ class HTU31D:
 
         """
 
-        return _HUMIDITY_RES[self._conversion_command >> 4 & 3]
+        return _HUMIDITY_RES[self._conversion_command >> 3 & 3]
 
     @humidity_resolution.setter
     def humidity_resolution(
@@ -190,9 +190,9 @@ class HTU31D:
     ) -> None:
         if value not in _HUMIDITY_RES:
             raise ValueError(f"Humidity resolution must be one of: {_HUMIDITY_RES}")
-        register = self._conversion_command & 0xCF
+        register = self._conversion_command & 0xE7
         hum_res = _HUMIDITY_RES.index(value)
-        self._conversion_command = register | hum_res << 4
+        self._conversion_command = register | hum_res << 3
 
     @property
     def temp_resolution(self) -> Literal["0.040", "0.025", "0.016", "0.012"]:
@@ -207,7 +207,7 @@ class HTU31D:
 
         """
 
-        return _TEMP_RES[self._conversion_command >> 2 & 3]
+        return _TEMP_RES[self._conversion_command >> 1 & 3]
 
     @temp_resolution.setter
     def temp_resolution(
@@ -215,6 +215,6 @@ class HTU31D:
     ) -> None:
         if value not in _TEMP_RES:
             raise ValueError(f"Temperature resolution must be one of: {_TEMP_RES}")
-        register = self._conversion_command & 0xF3
+        register = self._conversion_command & 0xF9
         temp_res = _TEMP_RES.index(value)
-        self._conversion_command = register | temp_res << 2
+        self._conversion_command = register | temp_res << 1
