@@ -20,8 +20,6 @@ authors = [
 urls = {Homepage = "https://github.com/jposada202020/MicroPython_HTU31D"}
 keywords = [
     "sensor",
-    "micropython",
-    "htu31d",
     "humidity",
     "temperature",
     "TE",
