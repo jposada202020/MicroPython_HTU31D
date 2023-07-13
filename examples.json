@@ -3,5 +3,5 @@
     ["micropython_htu31d/examples/htu31d_simpletest.py", "github:jposada202020/MicroPython_HTU31D/examples/htu31d_simpletest.py"],
     ["micropython_htu31d/examples/htu31d_settings_resolutions.py", "github:jposada202020/MicroPython_HTU31D/examples/htu31d_settings_resolutions.py"]
   ],
-  "version": "0.1"
+  "version": "1"
 }
