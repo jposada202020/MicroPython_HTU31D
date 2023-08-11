@@ -20,15 +20,15 @@ while True:
         htu.humidity_resolution = humidity_resolution
         print(f"Current Humidity Resolution: {humidity_resolution}")
         for _ in range(2):
-            print(f"Humidity: {htu.relative_humidity:.2f}")
-            print(f"Temperature: {htu.temperature:.2f}")
-            print("")
+            print(f"Humidity: {htu.relative_humidity:.2f}%")
+            print(f"Temperature: {htu.temperature:.2f}°C")
+            print()
             time.sleep(0.5)
     for temperature_resolution in temp_res:
         htu.temp_resolution = temperature_resolution
         print(f"Current Temperature Resolution: {temperature_resolution}")
         for _ in range(2):
-            print(f"Humidity: {htu.relative_humidity:.2f}")
-            print(f"Temperature: {htu.temperature:.2f}")
-            print("")
+            print(f"Humidity: {htu.relative_humidity:.2f}%")
+            print(f"Temperature: {htu.temperature:.2f}°C")
+            print()
             time.sleep(0.5)

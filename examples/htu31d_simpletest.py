@@ -22,5 +22,5 @@ while True:
     temperature, relative_humidity = htu.measurements
     print(f"Temperature: {temperature:0.1f}°C")
     print(f"Humidity: {relative_humidity:0.1%}%")
-    print("")
+    print()
     time.sleep(1)

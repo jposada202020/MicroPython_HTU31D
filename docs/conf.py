@@ -30,7 +30,6 @@ except ImportError:
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
-    "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinx_immaterial",
 ]
@@ -42,7 +41,6 @@ intersphinx_mapping = {
     "MicroPython": ("https://docs.micropython.org/en/latest/", None),
 }
 
-# autodoc_mock_imports = ["digitalio", "busio"]
 autoclass_content = "both"
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -183,9 +181,6 @@ sphinx_immaterial_custom_admonitions = [
         "override": True,
     },
 ]
-python_type_aliases = {
-    "DigitalInOut": "digitalio.DigitalInOut",
-}
 
 object_description_options = [
     ("py:.*", dict(generate_synopses="first_sentence")),
