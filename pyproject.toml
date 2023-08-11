@@ -3,32 +3,25 @@
 # SPDX-License-Identifier: MIT
 
 [build-system]
-requires = [
-    "setuptools",
-    "wheel",
-    "setuptools-scm",
-]
+requires = ["setuptools", "wheel", "setuptools-scm"]
 
 [project]
 name = "micropython-htu31d"
 description = "MicroPython library for TE HTU31D temperature and humidity sensors"
 version = "0.0.0+auto.0"
 readme = "README.rst"
-authors = [
-    {name = "JDM", email = "xxyx@mailmeto.mozmail.com"}
-]
-urls = {Homepage = "https://github.com/jposada202020/MicroPython_HTU31D"}
+authors = [{ name = "JDM", email = "xxyx@mailmeto.mozmail.com" }]
+urls = { Homepage = "https://github.com/jposada202020/MicroPython_HTU31D" }
 keywords = [
     "sensor",
     "humidity",
     "temperature",
     "TE",
     "htu31d",
-    "sensor",
     "driver",
     "micropython",
 ]
-license = {text = "MIT"}
+license = { text = "MIT" }
 classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries",
@@ -43,4 +36,4 @@ dynamic = ["dependencies", "optional-dependencies"]
 packages = ["micropython_htu31d"]
 
 [tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
+dependencies = { file = ["requirements.txt"] }

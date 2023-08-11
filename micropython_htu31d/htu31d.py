@@ -102,7 +102,6 @@ class HTU31D:
 
     @heater.setter
     def heater(self, new_mode: bool) -> None:
-        # check it is a boolean
         if not isinstance(new_mode, bool):
             raise AttributeError("Heater mode must be boolean")
         # cache the mode
@@ -122,7 +121,7 @@ class HTU31D:
 
     @property
     def temperature(self) -> float:
-        """The current temperature in degrees Celsius"""
+        """The current temperature in Celsius"""
         return self.measurements[0]
 
     @property
